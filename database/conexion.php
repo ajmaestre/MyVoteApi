@@ -1,6 +1,8 @@
 
 <?php
 
+    include_once '../app/respuestas/respuesta.php';
+
     class conexion{
 
         private $server;
@@ -12,6 +14,7 @@
 
         public function __construct() {
             try {
+                $respuesta = new Respuesta;
                 $datosLista = $this->datosConexion();
                 foreach ($datosLista as $key => $value) {
                     $this->server = $value["server"];
@@ -22,7 +25,7 @@
                 }
                 $this->conexion = new mysqli($this->server, $this->user, $this->password, $this->database, $this->port);
             } catch (Exception $e) {
-                return "Excepcion: $e";
+                return false;
             }
         }
 

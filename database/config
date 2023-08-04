@@ -2,9 +2,9 @@
 {
     "conexion": {
         "server": "localhost",
-        "user": "root",
-        "password": "",
-        "database": "myvotedb",
+        "user": "codersde_root",
+        "password": "Lovelace-1815",
+        "database": "codersde_proyectos",
         "port": 3306
     }
 }

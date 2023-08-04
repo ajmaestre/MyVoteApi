@@ -125,15 +125,11 @@
             }
         }
 
-        public function deleteUsuario($data){
+        public function deleteUsuario($id){
             try {
                 $respuesta = new Respuesta();
-                $usuario = json_decode($data, true);
-                if(!isset($usuario['id'])){
-                    return $respuesta->error400();
-                }
                 $query = "delete from usuario
-                            where id = ".$usuario['id']."";
+                            where id = ".$id."";
                 $result = parent::executeNotQuery($query);
                 if ($result) {
                     $response = $respuesta->response;

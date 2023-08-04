@@ -26,6 +26,7 @@ En la raiz de la API [pendiente](pendiente) se encuentra información útil sobr
 Para los verbos HTTP PUT y DELETE el id correspondiente al registro a actualizar o eliminar debe enviarse en el cuerpo de la solicitud HTTP.
 | Verbos HTTP| Endpoints                             				| Acción                                                              			|
 | ---------- | ---------------------------------------------------- | ----------------------------------------------------------------------------- |
+| POST        | /api/routes/auth                   				| Obtiene el token de autenticación del usuario a través de la contraseña y el correo electrónico (o el nombre de usuario)                               			|
 | GET        | /api/routes/usuarioRoute                   				| Obtiene la lista de todos los testigos electorales registrados                               			|
 | GET        | /api/routes/usuarioRoute?id={id}               				| Obtiene la información de un usuario por su id                       			|
 | GET        | /api/routes/usuarioRoute?page={page}        				| Obtiene la lista de usuarios por página de 50 usuarios                   			|
